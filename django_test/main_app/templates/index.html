@@ -8,15 +8,15 @@
 </head>
 <body>
     <h1>Points of INTEREST</h1>
-    {% for point_of_interest in points_of_interest %}
-    <p>{{ point.name }}</p>
-    <p>{{ point.relative_skill }}</p>
-    <p>{{ point.priority }}</p>
-    <p>{{ point.category }}</p>
-        {% if point.progress != 100 %}
-        <p>{{ point.progress }}</p>
+    {% for poi in pois %}
+        <h2>{{ poi.name }}</h2>
+        <p>Relative skill: {{ poi.relative_skill }}</p>
+        <p>Priority: {{ poi.priority }}</p>
+        <p>Category: {{ poi.category }}</p>
+        {% if poi.progress != 100 %}
+            <p>In progress: {{ poi.progress }}%</p>
         {% else %}
-        <p>Complete</p>
+            <p>Complete</p>
         {% endif %}
     {% endfor %}
 </body>

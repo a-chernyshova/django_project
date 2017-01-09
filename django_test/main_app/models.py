@@ -1,12 +1,11 @@
 from django.db import models
 
-# Create your models here.
 class poi(models.Model):
     name = models.CharField(max_length=50)
     relative_skill = models.CharField(max_length=200)
-    priority = models.IntegerField()
+    priority = models.IntegerField(max_length = 1)
     category = models.CharField(max_length=50)
-    progress = models.IntegerField()
+    progress = models.IntegerField(max_length=3)
 
     def __str__(self):
         return self.name
