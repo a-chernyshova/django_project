@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import poi
 
-# Register your models here.
+admin.site.register(poi)
+
+

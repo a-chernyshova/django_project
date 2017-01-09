@@ -1,12 +1,23 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Main page</h1>
-    <p>{{ name }}</p>
-    <p>{{ num }}</p>
+    <h1>Points of INTEREST</h1>
+    {% for point_of_interest in points_of_interest %}
+    <p>{{ point.name }}</p>
+    <p>{{ point.relative_skill }}</p>
+    <p>{{ point.priority }}</p>
+    <p>{{ point.category }}</p>
+        {% if point.progress != 100 %}
+        <p>{{ point.progress }}</p>
+        {% else %}
+        <p>Complete</p>
+        {% endif %}
+    {% endfor %}
 </body>
 </html>
