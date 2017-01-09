@@ -6,6 +6,7 @@ class poi(models.Model):
     priority = models.IntegerField(max_length = 1)
     category = models.CharField(max_length=50)
     progress = models.IntegerField(max_length=3)
+    img_url = models.CharField(max_length=250)
 
     def __str__(self):
         return self.name

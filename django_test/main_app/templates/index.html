@@ -14,16 +14,52 @@
     <div class="table">
     {% for poi in pois %}
         <div class="task_name">
-        <h2>{{ poi.name }}</h2> </div>
+            <h2>{{ poi.name }}</h2>
+        </div>
+        <div class="img">
+            <img src="{{ poi.img_url}}" height="150">
+        </div>
         <div class="desc">
-        <p>Relative skill: {{ poi.relative_skill }}</p>
-        <p>Priority: {{ poi.priority }}</p>
-        <p>Category: {{ poi.category }}</p>
-        {% if poi.progress != 100 %}
-            <p>In progress: {{ poi.progress }}%</p>
-        {% else %}
-            <p>Complete</p>
-        {% endif %}</div>
-    {% endfor %}</div>
+            <table>
+                <tr>
+                    <th>
+                        Relative skill:
+                    </th>
+                    <td>
+                        <p>{{ poi.relative_skill }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Priority:
+                    </th>
+                    <td>
+                        <p> {{ poi.priority }}</p>
+                    </td>
+                </tr>
+                 <tr>
+                    <th>
+                        Category:
+                    </th>
+                    <td>
+                         <p>{{ poi.category }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        In progress:
+                    </th>
+                    <td>
+                        {% if poi.progress != 100 %}
+                            <p>{{ poi.progress }}%</p>
+                        {% else %}
+                            <p>Complete</p>
+                        {% endif %}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        {% endfor %}
+    </div>
 </body>
 </html>

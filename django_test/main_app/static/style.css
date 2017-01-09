@@ -30,3 +30,22 @@ header img {
     padding: 50px;
     margin: 15px;
 }
+TABLE {
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+TD, TH {
+    padding: 1px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+}
+TH {
+    background: #DFE2DB; /* Цвет фона */
+    width: 105px;
+    height: 30px;
+}
+td {
+    padding: 3px;
+}
+.img {
+    float: right;
+}
