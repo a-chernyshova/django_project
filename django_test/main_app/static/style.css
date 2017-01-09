@@ -1,7 +1,32 @@
+h2 {
+    color: grey;
+}
 p {
     color: #607D8B;
      }
 h1 {
     color: blue;
     text-align: center;
+}
+body {
+    background: #f8f8f8;
+}
+header {
+    background: #C9E0FF;
+    border-radius: 15px 15px 0 0;
+    height: 75px;
+    margin: 5px;
+
+}
+header img {
+    height: 60px;
+    float:left;
+    margin: 15px;
+    border-radius: 35px;
+}
+.table {
+    background: #FCECD2;
+    border-radius: 0 0 15px 15px;
+    padding: 50px;
+    margin: 15px;
 }

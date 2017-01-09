@@ -14,8 +14,8 @@ class poi:
         self.progress = progress
 
 pois = {
-    poi("job", "programming testing", 5, "money and self-expression", 50),
-    poi("movie making", "treveling", 3, "usefull hobbie", 35),
-    poi("sport", "poledancing", 4, "health", 25),
+    poi("Job", "programming testing", 5, "money and self-expression", 50),
+    poi("Movie making", "treveling", 3, "usefull hobbie", 35),
+    poi("Sport", "poledancing", 4, "health", 25),
     poi("DL", "trevelling", 4, "car", 100)
 }

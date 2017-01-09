@@ -7,9 +7,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Points of INTEREST</h1>
+    <header>
+        <img src = "{% static 'img/avatar.png' %}" alt="Avatar">
+        <h1>Points of INTEREST</h1>
+    </header>
+    <div class="table">
     {% for poi in pois %}
-        <h2>{{ poi.name }}</h2>
+        <div class="task_name">
+        <h2>{{ poi.name }}</h2> </div>
+        <div class="desc">
         <p>Relative skill: {{ poi.relative_skill }}</p>
         <p>Priority: {{ poi.priority }}</p>
         <p>Category: {{ poi.category }}</p>
@@ -17,7 +23,7 @@
             <p>In progress: {{ poi.progress }}%</p>
         {% else %}
             <p>Complete</p>
-        {% endif %}
-    {% endfor %}
+        {% endif %}</div>
+    {% endfor %}</div>
 </body>
 </html>
